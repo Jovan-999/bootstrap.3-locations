@@ -48,10 +48,9 @@ img {
 .process-page__second-part {
   margin-top: 150px;
   width: 100%;
-  position: relative;
 }
 
-.process-page__second-part::before {
+.process-page__second-wrapper::before {
   content: '';
   position: absolute;
   right: 570px;
@@ -76,7 +75,7 @@ img {
   }
 }
 
-.process-page__second-part::after {
+.process-page__second-wrapper::after {
   content: '';
   position: absolute;
   right: 260px;
@@ -252,14 +251,14 @@ img {
     padding-top: 20px;
     display: grid;
     grid-column-start: 2;
-    padding-top: 0;
+    margin-top: 0;
+    padding-left: 6px;
   }
   @media (max-width: 768px) {
     font-size: 32px;
   }
   @media (max-width: 576px) {
     font-size: 24px;
-    padding-left: 6px;
   }
 }
 
