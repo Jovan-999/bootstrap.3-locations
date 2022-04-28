@@ -1,20 +1,18 @@
-// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
-$grid-gutter-width: 20px;
-$grid-columns: 12;
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 992px,
-  lg: 1200px,
-  xl: 1420px,
-);
-$container-max-widths: (
-  sm: 96%,
-  md: 96%,
-  lg: 96%,
-  xl: 1420px,
-);
-$gutter: $grid-gutter-width;
+.container-1420 {
+  max-width: 1430px;
+}
+
+.container-fluid {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
 
 // import font-family
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;500;700&display=swap');
@@ -418,8 +416,7 @@ img {
   }
 }
 
-.legal-representation__description-decoration,
-.legal-representation__description-learn {
+.location-pages__description-learn {
   font-size: 18px;
   line-height: 1.6;
   @media (max-width: 576px) {
@@ -427,12 +424,12 @@ img {
   }
 }
 
-.legal-representation__learn-more {
+.location-pages__display-more {
   display: none;
 }
 
-.legal-representation__description-learn.legal-representation__show-more
-  .legal-representation__learn-more {
+.location-pages__description-learn.location-pages__show-more
+  .location-pages__display-more {
   display: inline;
 }
 
@@ -449,8 +446,7 @@ img {
 
 // show more text start
 
-.legal-representation__absolute-learn,
-.unintentional-cost__absolute-learn {
+.location-pages__absolute-learn {
   color: #cb6942;
   position: absolute;
   right: 0;
@@ -481,8 +477,7 @@ img {
   }
 }
 
-.legal-representation__absolute-learn::after,
-.unintentional-cost__absolute-learn::after {
+.location-pages__absolute-learn::after {
   content: '';
   position: absolute;
   left: 0;
@@ -502,27 +497,22 @@ img {
   background: #ffffff;
 }
 
-.legal-representation__absolute-learn::after,
-.unintentional-cost__absolute-learn::after,
+.location-pages__absolute-learn::after,
 .process-page__absolute-read::after {
   @media (max-width: 576px) {
     width: 88px;
   }
 }
 
-.legal-representation__plus-sign,
-.unintentional-cost__plus-sign,
-.process-page__plus-sign {
+.location-pages__plus-sign {
   margin-right: 15px;
   @media (max-width: 576px) {
     margin-right: 8px;
   }
 }
 
-.legal-representation__plus-sign,
-.legal-representation__anchor-learn,
-.unintentional-cost__anchor-learn,
-.unintentional-cost__plus-sign {
+.location-pages__plus-sign,
+.location-pages__anchor-learn {
   text-decoration: none;
   color: #cb6942;
   font-size: 18px;
@@ -532,7 +522,7 @@ img {
 }
 
 .process-page__anchor-read,
-.process-page__plus-sign {
+.location-pages__plus-sign {
   text-decoration: none;
   color: #ffffff;
   font-size: 18px;
@@ -541,12 +531,12 @@ img {
   }
 }
 
-.unintentional-cost__absolute-learn {
-  padding-right: 70px;
-  @media (max-width: 1200px) {
-    padding-right: 0;
-  }
-}
+// .unintentional-cost__absolute-learn {
+//   padding-right: 70px;
+//   @media (max-width: 1200px) {
+//     padding-right: 0;
+//   }
+// }
 // show more text end
 
 //
@@ -558,6 +548,8 @@ img {
     display: flex;
     flex-direction: column;
     gap: 68px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 .legal-representation__container-relative {
@@ -567,8 +559,8 @@ img {
 .process-page__img {
   object-fit: cover;
   position: relative;
-  left: -20px;
-  width: calc(100% + 20px);
+  left: -30px;
+  width: calc(100% + 30px);
   height: 100%;
 }
 
@@ -591,7 +583,8 @@ img {
   @media (max-width: 576px) {
     margin-bottom: 64px;
     margin-top: 76px;
-    padding: 20px 100px 20px 100px;
+    // padding: 20px 100px 20px 100px;
+    width: 100%;
     font-size: 14px;
     height: 44px;
   }
@@ -622,6 +615,15 @@ img {
   }
 }
 
+.legal-representation__button-box {
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 .legal-representation__button-container {
   @media (max-width: 768px) {
     display: flex;
@@ -642,6 +644,7 @@ img {
   margin-top: 72px;
   @media (max-width: 768px) {
     padding: 12px 90px 12px 90px;
+    width: 100%;
   }
   @media (max-width: 576px) {
     margin-top: 0;
@@ -651,6 +654,7 @@ img {
   margin-top: 72px;
   @media (max-width: 768px) {
     padding: 12px 80px 12px 80px;
+    width: 100%;
   }
 }
 // button area end
@@ -671,6 +675,9 @@ img {
 
 .process-page__cards-together {
   margin-top: 90px;
+  @media (max-width: 576px) {
+    margin-top: 58px;
+  }
 }
 
 .process-page__card {
@@ -688,6 +695,9 @@ img {
   width: 94px;
   height: 110px;
   margin-bottom: 60px;
+  @media (max-width: 1200px) {
+    margin-bottom: 24px;
+  }
 }
 
 .process-page__box-text {
@@ -712,6 +722,20 @@ img {
   // justify-content: center;
 }
 
+.box-1 {
+  margin-right: 100px;
+  @media (max-width: 1200px) {
+    margin-right: 0;
+  }
+}
+
+.box-3 {
+  margin-left: 150px;
+  @media (max-width: 1200px) {
+    margin-left: 0;
+  }
+}
+
 .process-page__svg-1,
 .process-page__svg-2,
 .process-page__svg-3 {
@@ -723,7 +747,10 @@ img {
   position: absolute;
   bottom: 20px;
   left: -78px;
-  // @media (max-width: );
+  @media (max-width: 400px) {
+    bottom: 15px;
+    left: -85px;
+  }
 }
 .process-page__svg-2 {
   position: absolute;
@@ -744,6 +771,10 @@ img {
   position: absolute;
   bottom: 43px;
   left: -83px;
+  @media (max-width: 400px) {
+    bottom: 15px;
+    left: -96px;
+  }
 }
 
 .process-page__flex-btn {
@@ -765,9 +796,10 @@ img {
   margin-top: 72px;
   cursor: pointer;
   @media (max-width: 576px) {
-    margin-bottom: 64px;
-    margin-top: 76px;
-    padding: 15px 91px 15px 95px;
+    // margin-bottom: 64px;
+    margin-top: 48px;
+    // padding: 15px 91px 15px 95px;
+    width: 100%;
     font-size: 14px;
     height: 44px;
   }
@@ -810,14 +842,14 @@ img {
   position: absolute;
   top: 160px;
   left: -276px;
+  width: 100%;
   // bottom: 125px;
-  @media only screen and (max-width: 1120px) {
-    background-size: contain;
-    width: 80%;
+  @media only screen and (max-width: 1200px) {
+    width: 100%;
     left: 0;
   }
   @media only screen and (max-width: 920px) {
-    width: 90%;
+    width: 100%;
   }
   @media only screen and (max-width: 600px) {
     background-size: cover;
@@ -829,7 +861,7 @@ img {
   }
   @media only screen and (max-width: 400px) {
     top: 295px;
-    left: -90px;
+    left: -27px;
   }
 }
 
@@ -934,13 +966,10 @@ img {
   margin-top: 57px;
   font-size: 18px;
   position: relative;
-  padding-right: 70px;
+  max-width: 387px;
   line-height: 1.6;
   @media (max-width: 1200px) {
-    padding-right: 60px;
-  }
-  @media (max-width: 992px) {
-    padding-right: 0;
+    max-width: 100%;
   }
   @media (max-width: 576px) {
     font-size: 14px;
@@ -990,7 +1019,7 @@ img {
 .unintentional-cost__texas-img {
   height: 100%;
 
-  // margin-bottom: 350px;
+  margin-bottom: 350px;
 }
 
 .unintentional-cost__photo-second {
@@ -1034,6 +1063,7 @@ img {
     font-size: 16px;
     height: 44px;
     margin-top: 68px;
+    width: 100%;
   }
   @media (max-width: 576px) {
     font-size: 14px;
@@ -1119,6 +1149,8 @@ img {
 //kristijan texas
 
 .flex {
-  display: flex;
-  flex-wrap: wrap;
+  @media (min-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

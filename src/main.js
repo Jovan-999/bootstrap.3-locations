@@ -1,10 +1,8 @@
-const learnMoreBtn = document.querySelector(
-  '.legal-representation__anchor-learn'
-);
-const text = document.querySelector('.legal-representation__description-learn');
+const learnMoreBtn = document.querySelector('.location-pages__anchor-learn');
+const text = document.querySelector('.location-pages__description-learn');
 
 learnMoreBtn.addEventListener('click', (e) => {
-  text.classList.toggle('legal-representation__show-more');
+  text.classList.toggle('location-pages__show-more');
   if (learnMoreBtn.innerText === 'Learn More') {
     learnMoreBtn.innerText = 'Learn Less';
   } else {
