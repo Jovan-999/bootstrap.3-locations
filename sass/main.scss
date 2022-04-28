@@ -16,6 +16,13 @@
   padding-right: 0;
 }
 
+.flex {
+  @media (min-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 // custom properties from bootstrap 5 end
 
 // import font-family
@@ -1148,12 +1155,3 @@ img {
 // list box
 
 //unintentional cost end
-
-//kristijan texas
-
-.flex {
-  @media (min-width: 1200px) {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
